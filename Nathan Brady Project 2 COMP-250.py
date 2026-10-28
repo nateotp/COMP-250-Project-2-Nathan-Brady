@@ -111,8 +111,8 @@ def viewPendingAlerts(queue):
             displayAlert(alert)
            
             # calculate severity
-    totalSeverity = total_severity(list(queue), 0)
-    print("Total Severity ", totalSeverity)
+        totalSeverity = total_severity(list(queue), 0)
+     print("Total Severity ", totalSeverity)
     
 # show resolved alerts frm newest to oldest
 def viewResolutionHistory(resolved):
@@ -133,10 +133,10 @@ def searchAlertByID(queue):
         ID = get_int("Enter Alert ID: ", 1, alertCounter -1)
         alert = search_alert(list(queue), ID, 0)
         
-    if alert is None:
-        print("Alert not found.")
-    else:
-        displayAlert(alert)
+        if alert is None:
+            print("Alert not found.")
+        else:
+            displayAlert(alert)
     
 # message to print when exiting goodbye!
 def exitMessage():
